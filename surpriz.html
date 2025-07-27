@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anılarımız</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .photo-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        .photo-caption {
+            padding: 15px;
+            text-align: center;
+            color: #555;
+        }
+
+        a.back-button {
+            display: inline-block;
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        a.back-button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Beraber Biriktirdiğimiz Güzel Anılar</h1>
+    <div class="photo-grid">
+        <div class="photo-item">
+            <img src="bir.jpg" alt="Anı 1">
+            <div class="photo-caption">Seni çektiğim ilk foto :D</div>
+        </div>
+        <div class="photo-item">
+            <img src="iki.jpg" alt="Anı 2">
+            <div class="photo-caption">Bunlar benim için çok önemli hala saklıyorum :D</div>
+        </div>
+        <div class="photo-item">
+            <img src="uc.jpg" alt="Anı 3">
+            <div class="photo-caption">Bugün çok eğlenceliydi fıstığı unutmadım</div>
+        </div>
+        <div class="photo-item">
+            <img src="dort.jpg" alt="Anı 4">
+            <div class="photo-caption">Bunu çektirmek için çok çabalamıştım söz verdin diye yaptın biliyorummm :D</div>
+        </div>
+        <div class="photo-item">
+            <img src="bes.jpg" alt="Anı 5">
+            <div class="photo-caption">-Civciv miyimm +Tavuksun -hıııı</div>
+        </div>
+        <div class="photo-item">
+            <img src="alti.jpg" alt="Anı 6">
+            <div class="photo-caption">Burda güneş gibi parlamışsınnn</div>
+        </div>
+        <div class="photo-item">
+            <img src="yedi.jpg" alt="Anı 7">
+            <div class="photo-caption">Bu gün çok enerjiktin yetişemiyordu kimse sana :D</div>
+        </div>
+        <div class="photo-item">
+            <img src="sekiz.jpg" alt="Anı 8">
+            <div class="photo-caption">Bunuda yan çekmiş Eşekkk</div>
+        </div>
+        <div class="photo-item">
+            <img src="dokuz.jpg" alt="Anı 9">
+            <div class="photo-caption">Buda vedalaşma günümüz yine sinir etmişim seni ama ağlamıştım</div>
+        </div>
+    </div>
+    <a href="dogumgunu.html" class="back-button">Geri Dön</a>
+</body>
+</html>

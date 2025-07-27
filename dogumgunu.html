@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğum Günün Kutlu Olsun Jalecikk</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden; /* Taşmayı önler */
+            position: relative;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 90%;
+            animation: fadeIn 2s ease-out;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #673ab7;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #e64a19;
+            transform: translateY(-5px);
+        }
+
+        /* Konfeti efektleri */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffd700; /* Altın sarısı */
+            border-radius: 50%;
+            opacity: 0;
+            animation: fall 5s linear infinite;
+        }
+
+        .confetti:nth-child(2n) { background-color: #ff69b4; /* Sıcak pembe */ }
+        .confetti:nth-child(3n) { background-color: #00ced1; /* Turkuaz */ }
+        .confetti:nth-child(4n) { background-color: #9370db; /* Mor */ }
+        .confetti:nth-child(5n) { background-color: #3cb371; /* Deniz yeşili */ }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotateZ(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotateZ(720deg); opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Küçük ekranlar için responsive ayarlar */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .container {
+                padding: 30px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> 🎉 Doğum Günün Kutlu Olsun! 🎉</h1>
+        <h2>Küçük civciv,</h2>
+        <p>Senin gibi harika bir arkadaşa sahip olduğum için çok şanslıyım. Hayatının her anının mutlulukla, sağlıkla ve başarılarla dolu olmasını dilerim.</p>
+        <p>Gülüşün hiç eksik olmasın, hayallerin gerçek olsun. Her zaman yanındayım.</p>
+        <p>Nice güzel yaşlara, birlikte nice güzel anılara.</p>
+        <p>Sevgilerimle,</p>
+        <p><strong>Berkocan</strong></p>
+        <a href="#" class="button">Küçük Bir Sürpriz İçin Tıkla!</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const numConfetti = 50; // Konfeti sayısı
+
+            for (let i = 0; i < numConfetti; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                body.appendChild(confetti);
+            }
+
+            // Butona tıklanınca ne olacağını buraya ekleyebilirsin
+            const surpriseButton = document.querySelector('.button');
+            surpriseButton.addEventListener('click', (e) => {
+                e.preventDefault(); // Sayfanın yukarı kaymasını engeller
+                window.location.href = 'surpriz.html'; // Sürpriz sayfasına yönlendir
+                // Buraya başka bir sayfaya yönlendirme veya modal pencere açma gibi şeyler ekleyebilirsin.
+            });
+        });
+    </script>
+</body>
+</html>
